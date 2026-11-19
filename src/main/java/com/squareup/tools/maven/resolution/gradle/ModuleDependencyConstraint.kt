@@ -21,10 +21,12 @@ sealed class ModuleDependencyConstraint {
   abstract val group: String
   abstract val module: String
   abstract val version: ModuleVersionConstraint
+  abstract val reason: String?
 
   data class ModuleDependencyConstraintV1_1(
     override val group: String,
     override val module: String,
-    override val version: ModuleVersionConstraintV1_1
+    override val version: ModuleVersionConstraintV1_1,
+    override val reason: String? = null
   ) : ModuleDependencyConstraint()
 }

@@ -20,11 +20,11 @@ import com.google.common.truth.Truth.assertThat
 import com.squareup.tools.maven.resolution.gradle.GradleModuleParser
 import java.nio.file.Paths
 import org.junit.Test
+import java.io.File
+import java.nio.file.Files
 
 class GradleModuleParsingTest {
-  private val runfiles = Paths.get(System.getenv("JAVA_RUNFILES")!!)
-  private val workspace = runfiles.resolve(Paths.get(System.getenv("TEST_WORKSPACE")!!))
-  private val here = workspace.resolve(Paths.get(System.getenv("TEST_BINARY")!!).parent)
+  private val here = Paths.get("src", "test", "java", "com", "squareup", "tools", "maven", "resolution")
 
   @Test fun parseOkio260() {
     val parser = GradleModuleParser()

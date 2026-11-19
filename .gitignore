@@ -1,6 +1,12 @@
+# Eclipse files
+.classpath
+.project
+.settings/
+
 bazel-*
 .idea/
 .ijwb/
 .aswb/
 *.profile.gz
 *.asc
+/target/
